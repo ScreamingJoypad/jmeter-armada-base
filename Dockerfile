@@ -18,15 +18,15 @@ RUN apt-get clean && \
 # install jmeter
 RUN   mkdir /jmeter \
       && cd /jmeter/ \
-      && wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-$JMETER_VERSION.tgz \
-      && tar -xzf apache-jmeter-$JMETER_VERSION.tgz \
-      && rm apache-jmeter-$JMETER_VERSION.tgz
+      && wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-3.3.tgz \
+      && tar -xzf apache-jmeter-3.3.tgz \
+      && rm apache-jmeter-3.3.tgz
 
 # add plugins
 #ADD jmeter-plugins/lib /jmeter/apache-jmeter-$JMETER_VERSION/lib
 
 # Set JMeter Home
-ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
+ENV JMETER_HOME /jmeter/apache-jmeter-3.3/
 
 # Add JMeter to the Path
 ENV PATH $JMETER_HOME/bin:$PATH
