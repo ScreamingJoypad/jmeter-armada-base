@@ -23,7 +23,7 @@ RUN   mkdir /jmeter \
       && rm apache-jmeter-$JMETER_VERSION.tgz
 
 # add plugins
-ADD jmeter-plugins/lib /jmeter/apache-jmeter-$JMETER_VERSION/lib
+#ADD jmeter-plugins/lib /jmeter/apache-jmeter-$JMETER_VERSION/lib
 
 # Set JMeter Home
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
